@@ -1,0 +1,12 @@
+---
+- name: Install php5-fpm, nginx, mysql
+  # hosts: local
+  # user: vagrant
+  # sudo: yes
+  
+  roles:
+    - common
+    - php-fpm
+    - nginx
+    - mysql
+...

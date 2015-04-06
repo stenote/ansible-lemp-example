@@ -1,0 +1,11 @@
+---
+- name: Install php5-fpm
+  apt: name={{ item }} state=present
+  with_items:
+    - php5-fpm
+# You Can Add More Here
+
+- name: Change php-fpm configuration file
+  template: src=www.conf dest=/etc/php5/fpm/pool.d/www.conf
+  notify: restart php-fpm
+...
